@@ -16,6 +16,7 @@
 
 package com.google.samples.apps.sunflower.adapters
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -48,7 +49,13 @@ class PlantAdapter : ListAdapter<Plant, PlantAdapter.ViewHolder>(PlantDiffCallba
     private fun createOnClickListener(plantId: String): View.OnClickListener {
         return View.OnClickListener {
             val direction = PlantListFragmentDirections.ActionPlantListFragmentToPlantDetailFragment(plantId)
-            it.findNavController().navigate(direction)
+            try {
+                it.findNavController().navigate(direction)
+
+            }catch (e :IllegalArgumentException ){
+                Log.i("Themis", "createOnClickListener: step last: 同时点击两个iterm ")
+                throw e
+            }
         }
     }
 

@@ -17,6 +17,7 @@
 package com.google.samples.apps.sunflower
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.databinding.DataBindingUtil
@@ -48,6 +49,7 @@ class GardenActivity : AppCompatActivity() {
     }
 
     override fun onSupportNavigateUp(): Boolean {
+        Log.i("Themis", "onSupportNavigateUp: step 1 : click NavigationUI")
         return NavigationUI.navigateUp(drawerLayout,
                 Navigation.findNavController(this, R.id.garden_nav_fragment))
     }

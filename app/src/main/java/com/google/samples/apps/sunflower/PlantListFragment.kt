@@ -17,6 +17,7 @@
 package com.google.samples.apps.sunflower
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuInflater
@@ -51,6 +52,7 @@ class PlantListFragment : Fragment() {
         subscribeUi(adapter)
 
         setHasOptionsMenu(true)
+        Log.i("Themis", "onCreateView: step 2: entering PlantListFragment")
         return binding.root
     }
 
