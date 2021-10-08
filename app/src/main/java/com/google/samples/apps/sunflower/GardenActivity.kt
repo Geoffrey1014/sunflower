@@ -49,7 +49,7 @@ class GardenActivity : AppCompatActivity() {
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        Log.i("Themis", "onSupportNavigateUp: step 1 : click NavigationUI")
+        Log.i("Themis", "Event 1: Clicked the drawer on the left.")
         return NavigationUI.navigateUp(drawerLayout,
                 Navigation.findNavController(this, R.id.garden_nav_fragment))
     }

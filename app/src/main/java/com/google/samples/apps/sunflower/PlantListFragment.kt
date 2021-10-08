@@ -52,7 +52,7 @@ class PlantListFragment : Fragment() {
         subscribeUi(adapter)
 
         setHasOptionsMenu(true)
-        Log.i("Themis", "onCreateView: step 2: entering PlantListFragment")
+        Log.i("Themis", "Event 2: Selected \"Plant list\".")
         return binding.root
     }
 

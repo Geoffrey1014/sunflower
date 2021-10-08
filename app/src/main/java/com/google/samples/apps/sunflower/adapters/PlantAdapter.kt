@@ -53,7 +53,8 @@ class PlantAdapter : ListAdapter<Plant, PlantAdapter.ViewHolder>(PlantDiffCallba
                 it.findNavController().navigate(direction)
 
             }catch (e :IllegalArgumentException ){
-                Log.i("Themis", "createOnClickListener: step last: 同时点击两个iterm ")
+                Log.i("Themis", "Event 3: Clicked two items at the same time.")
+                Log.i("Themis", "Crash!: IllegalArgumentException.")
                 throw e
             }
         }
